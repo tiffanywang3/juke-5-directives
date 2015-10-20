@@ -1,20 +1,23 @@
-<thead>
-	<tr>
-		<th></th>
-		<th>Name</th>
-		<th>Artists</th>
-		<th>Genres</th>
-	</tr>
-</thead>
-<tbody>
-	<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}">
-		<td>
-			<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
-				<span class="glyphicon glyphicon-play"></span>
-			</button>
-		</td>
-		<td>{{ song.name }}</td>
-		<td><span ng-repeat="artist in song.artists">{{ artist.name }} </span></td>
-		<td>{{ song.genres.join(', ') }}</td>
-	</tr>
-</tbody>
+<table class='table'>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Name</th>
+			<th>Artists</th>
+			<th>Genres</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}">
+			<td>
+				<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
+					<span class="glyphicon glyphicon-play"></span>
+				</button>
+			</td>
+			<td>{{ song.name }}</td>
+			<!-- <td><span ng-repeat="artist in song.artists">{{ artist.name }} </span></td> -->
+			<artist-list artists="song.artists"></artist-list>
+			<td>{{ song.genres.join(', ') }}</td>
+		</tr>
+	</tbody>
+</table>
