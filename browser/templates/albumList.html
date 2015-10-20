@@ -1,0 +1,9 @@
+<a ng-repeat="album in albums" class="thumbnail" ui-sref="album({albumId: album._id})">
+	<img ng-src="{{ album.imageUrl }}">
+	<div class="caption">
+		<h5>
+			<span>{{ album.name }}</span>
+		</h5>
+		<small>{{ album.songs.length }} songs</small>
+	</div>
+</a>

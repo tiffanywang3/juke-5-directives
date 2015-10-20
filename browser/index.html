@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Juke</title>
+	<link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+	<link href="/bootstrap-dark.css" rel="stylesheet" />
+	<link href="/style.css" rel="stylesheet" />
+	<script src="/lodash/index.js"></script>
+	<script src="/angular/angular.js"></script>
+	<script src="/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/angular-messages/angular-messages.js"></script>
+	<script src="/js/module.js"></script>
+	<script src="/js/controllers/album.js"></script>
+	<script src="/js/controllers/albums.js"></script>
+	<!--<script src="/js/controllers/player.js"></script> -->
+	<script src="/js/controllers/artist.js"></script>
+	<script src="/js/controllers/artists.js"></script>
+	<script src="/js/controllers/playlist-form.js"></script>
+	<script src="/js/controllers/playlist.js"></script>
+	<script src="/js/controllers/playlists.js"></script>
+	<script src="/js/controllers/song-choose.js"></script>
+	<script src="/js/factories/player.js"></script>
+	<script src="/js/factories/album.js"></script>
+	<script src="/js/factories/song.js"></script>
+	<script src="/js/factories/artist.js"></script>
+	<script src="/js/factories/playlist.js"></script>
+	<script src="/js/states/albums.js"></script>
+	<script src="/js/states/album.js"></script>
+	<script src="/js/states/artists.js"></script>
+	<script src="/js/states/artist.js"></script>
+	<script src="/js/states/artist-albums.js"></script>
+	<script src="/js/states/artist-songs.js"></script>
+	<script src="/js/states/new-playlist.js"></script>
+	<script src="/js/states/playlist.js"></script>
+	<script src="/js/directives/sidebar.js"></script>
+	<script src="/js/directives/footer.js"></script>
+	<script src="/js/directives/albums.js"></script>
+	<script src="/js/directives/artists.js"></script>
+</head>
+<body ng-app="juke">
+	<div id="main" class="container-fluid">
+
+		<div class="col-xs-2">
+			<sidebar></sidebar>
+		</div>
+
+		<div class="col-xs-10">
+			<ui-view></ui-view>
+		</div>
+
+		<footer></footer>
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<div ng-show="getCurrentSong()">
+	<div class="pull-left">
+		<button ng-click="back()" class="btn btn-default">
+			<span class="glyphicon glyphicon-step-backward"></span>
+		</button>
+		<button ng-click="toggle()" class="btn btn-default">
+			<span ng-if="!isPlaying()" class="glyphicon glyphicon-play"></span>
+			<span ng-if="isPlaying()" class="glyphicon glyphicon-pause"></span>
+		</button>
+		<button ng-click="forward()" class="btn btn-default">
+			<span class="glyphicon glyphicon-step-forward"></span>
+		</button>
+	</div>
+	<div class="bar">
+		<div class="progress">
+			<div class="progress-bar" ng-style="{width: getPercent()}"></div>
+		</div>
+	</div>
+</div>
