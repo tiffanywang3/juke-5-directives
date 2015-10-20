@@ -26,7 +26,7 @@ app.directive('songList', ['PlayerFactory', function(PlayerFactory, $scope){
 			songs: "="
 		},
 		link: function($scope){
-			console.log("PlayerFactory", PlayerFactory)
+			//console.log("PlayerFactory", PlayerFactory)
 			$scope.isCurrent = function (song) {
 				var current = PlayerFactory.getCurrentSong();
 				return current && current._id == song._id;

@@ -8,15 +8,17 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}">
+		<tr ng-repeat="song in songs" ng-class="{active: isCurrent(song)}" double-click="start(song)">
 			<td>
-				<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
+			<!-- 	<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
 					<span class="glyphicon glyphicon-play"></span>
-				</button>
+				</button> -->
 			</td>
 			<td>{{ song.name }}</td>
-			<!-- <td><span ng-repeat="artist in song.artists">{{ artist.name }} </span></td> -->
-			<artist-list artists="song.artists"></artist-list>
+			<!-- <td><a ui-sref="artist"><span ng-repeat="artist in song.artists">{{ artist.name }} </span></a></td> -->
+			<td><artist-links artists="song.artists"></artist-links></td>
+
+			
 			<td>{{ song.genres.join(', ') }}</td>
 		</tr>
 	</tbody>
